@@ -1,0 +1,22 @@
+{
+  "login": {
+    "title": "Bienvenido a",
+    "buttons": {
+      "google": "Ingresa con Google",
+      "or": "O ingresa usando tu correo",
+      "submit": "Ingresar"
+    },
+    "inputs": {
+      "email": "Correo",
+      "password": "Contraseña"
+    },
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "sideImage": {
+      "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios",
+      "link": "Registrarse"
+    },
+    "sideForm": {
+      "forgotPassword": "¿Olvidaste tu contraseña?"
+    }
+  }
+}

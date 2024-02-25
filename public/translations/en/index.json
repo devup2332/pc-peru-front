@@ -1,0 +1,16 @@
+
+{
+  "login": {
+    "title": "Welcome again to",
+    "buttons": {
+      "google": "Login with Google",
+      "or": "Or login using your email",
+      "submit": "Login"
+    },
+    "inputs": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "forgotPassword": "¿Forgot Password?"
+  }
+}
