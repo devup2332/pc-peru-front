@@ -7,15 +7,14 @@ interface CustomInputProps extends InputProps {
 }
 
 const CustomInput = (props: CustomInputProps) => {
-  const { register, name } = props;
-  return register && name ? (
+  return props.register && props.name ? (
     <Input
       radius="sm"
       classNames={{
         inputWrapper: "h-12",
       }}
       {...props}
-      {...register(name)}
+      {...props.register(props.name)}
     />
   ) : (
     <Input

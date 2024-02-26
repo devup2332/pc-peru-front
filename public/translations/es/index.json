@@ -15,8 +15,42 @@
       "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios",
       "link": "Registrarse"
     },
+    "links": {
+      "notHaveAccount": {
+        "text": "No tienes una cuenta ?",
+        "link": "Registrate"
+      }
+    },
     "sideForm": {
       "forgotPassword": "¿Olvidaste tu contraseña?"
+    }
+  },
+  "register": {
+    "title": {
+      "text": "Registrate en",
+      "brand": "PC Peru"
+    },
+    "buttons": {
+      "or": "O registrate usando tu correo",
+      "google": "Registrate con Google",
+      "submit": "Registrarse"
+    },
+    "inputs": {
+      "email": "Correo",
+      "phone": "Telefono",
+      "fullName": "Nombre completo",
+      "password": "Contraseña",
+      "password2": "Repite tu contraseña"
+    },
+    "links": {
+      "haveAccount": {
+        "text": "Tienes una cuenta ?",
+        "link": "Ingresa"
+      }
+    },
+    "sideImage": {
+      "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios",
+      "link": "Ingresar"
     }
   }
 }
