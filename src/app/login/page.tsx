@@ -131,7 +131,7 @@ const LoginPage = () => {
             <Link
               rel="stylesheet"
               href="/forgotPassword"
-              className="text-primary text-xs w-fit"
+              className="text-primary text-xs w-fit lg:text-sm"
             >
               {t("login.sideForm.forgotPassword")}
             </Link>

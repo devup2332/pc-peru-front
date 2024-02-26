@@ -1,9 +1,14 @@
 import { Button, ButtonProps } from "@nextui-org/react";
+import { twMerge } from "tailwind-merge";
 
 export const CustomButton = (props: ButtonProps) => {
   const { children, ...otherProps } = props;
   return (
-    <Button className="h-12 text-sm" radius="sm" {...otherProps}>
+    <Button
+      {...otherProps}
+      radius="sm"
+      className={twMerge("h-12 text-sm", props.className)}
+    >
       {children}
     </Button>
   );
