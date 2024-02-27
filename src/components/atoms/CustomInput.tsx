@@ -20,9 +20,7 @@ const CustomInput = (props: CustomInputProps) => {
     <Input
       radius="sm"
       classNames={{
-        input: "placeholder:text-gray-400",
-        inputWrapper: "h-[50px]",
-        label: "text-gray-400",
+        inputWrapper: "h-12",
       }}
       {...props}
     />

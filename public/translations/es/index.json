@@ -52,5 +52,27 @@
       "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios",
       "link": "Ingresar"
     }
+  },
+  "home": {
+    "menu": {
+      "links": {
+        "home": "Inicio",
+        "components": "Componentes PC",
+        "smartphones": "Smartphones",
+        "budgets": "Presupuestos",
+        "login": "Ingresar",
+        "register": "Registrarse"
+      },
+      "seccions": {
+        "actions": "Acciones",
+        "authentication": "Autenticacion"
+      }
+    },
+    "banner": {
+      "input": {
+        "placeholderText": "Buscar algun producto"
+      },
+      "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios"
+    }
   }
 }
