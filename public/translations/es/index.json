@@ -73,6 +73,9 @@
         "placeholderText": "Buscar algun producto"
       },
       "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios"
+    },
+    "trending": {
+      "title": "Tendencias"
     }
   }
 }

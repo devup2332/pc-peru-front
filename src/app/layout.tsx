@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <I18NextProvider>
           <NextUiProvider>
-            <main className="custom-light text-foreground bg-background">{children}</main>
+            <main className="custom-light text-foreground bg-background">
+              {children}
+            </main>
           </NextUiProvider>
         </I18NextProvider>
       </body>
