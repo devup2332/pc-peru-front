@@ -54,6 +54,7 @@
     }
   },
   "home": {
+    "loading": "Cargando...",
     "menu": {
       "links": {
         "home": "Inicio",
@@ -75,7 +76,13 @@
       "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios"
     },
     "trending": {
-      "title": "Tendencias"
+      "title": "Tendencias",
+      "showMore": "Ver mas"
+    },
+    "cathegory": {
+      "title": "Categorias",
+      "showMore": "Ver mas",
+      "description": "Elige una de nuestras categorias seleccionadas con los mejores productos"
     }
   }
 }

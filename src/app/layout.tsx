@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import "./globals.css";
 import { NextUiProvider } from "./nextUiProvider";
 import I18NextProvider from "./I18NextProvider";
+import 'swiper/css/navigation';
+import "./globals.css";
 
 const montserrat = Montserrat({ subsets: [] });
 

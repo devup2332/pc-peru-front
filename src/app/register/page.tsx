@@ -32,7 +32,7 @@ const RegisterPage = () => {
     console.log({ data });
   };
   return (
-    <div className="w-full h-screen grid place-items-center">
+    <div className="fade w-full h-screen grid place-items-center">
       <div className="lg:shadow-customShadow lg:rounded-xl w-10/12 max-w-sm lg:flex lg:max-w-5xl xl:max-w-6xl 2xl:max-w-screen-2xl overflow-hidden ">
         <div className="py-6 lg:py-16 lg:w-6/12 lg:flex lg:justify-center lg:items-center 2xl:py-28">
           <form

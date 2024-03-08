@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { IoIosStar } from "react-icons/io";
 import React from "react";
+import Image from "next/image";
 
 interface ItemCardProp {
   item: {
@@ -18,7 +19,7 @@ const ItemCard = ({ item }: ItemCardProp) => {
   return (
     <div
       key={id}
-      className="border-1 h-full border-black/20 rounded-lg py-8 px-6 grid gap-5 max-w-sm mx-auto cursor-pointer hover:shadow-lg transition-shadow"
+      className="bg-white border-1 h-full border-black/20 rounded-lg py-8 px-6 grid gap-5 max-w-sm mx-auto cursor-pointer hover:shadow-lg transition-shadow"
     >
       <img
         src={image}

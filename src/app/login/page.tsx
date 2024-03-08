@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IconGoogle } from "@/components/icons/IconGoogle";
 import { useTranslation } from "react-i18next";
 import CustomInput from "@/components/atoms/CustomInput";
@@ -17,10 +17,12 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 import { sleep } from "@/lib/utils/sleep";
+import Loading from "@/components/organisms/Loading";
 
 const LoginPage = () => {
   const [showPass, setShowPass] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [loadingPage, setLoadingPage] = useState(true);
   const {
     register,
     handleSubmit,
@@ -36,16 +38,20 @@ const LoginPage = () => {
     setIsLoading(false);
   };
 
+  useEffect(() => {
+    setLoadingPage(false);
+  }, []);
+  if (loadingPage) return <Loading />;
   return (
-    <div className="h-screen flex justify-center items-center text-sm">
+    <div className="fade h-screen flex justify-center items-center text-sm">
       <div className="lg:shadow-customShadow lg:rounded-xl w-10/12 max-w-sm lg:max-w-4xl flex overflow-hidden xl:max-w-6xl 2xl:max-w-screen-2xl">
         <div className="w-6/12 hidden lg:block lg:relative">
           <Image
             src={LoginImage}
             className="w-full h-full object-cover"
             alt=""
-            width={1000}
-            height={1000}
+            width={700}
+            height={700}
           />
           <div className="absolute top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center">
             <div className="w-10/12 grid gap-4 2xl:w-8/12 2xl:gap-8">
