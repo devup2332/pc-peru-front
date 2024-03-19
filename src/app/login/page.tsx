@@ -35,7 +35,7 @@ const LoginPage = () => {
 	const loginUser: SubmitHandler<FieldValues> = async () => {
 		setIsLoading(true);
 		await sleep(3000);
-					setIsLoading(false);
+		setIsLoading(false);
 	};
 
 	useEffect(() => {
