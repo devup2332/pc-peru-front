@@ -1,4 +1,5 @@
 "use client";
+import { Toaster, toast } from "sonner";
 import { CustomButton } from "@/components/atoms/CustomButton";
 import CustomInput from "@/components/atoms/CustomInput";
 import { IconGoogle } from "@/components/icons/IconGoogle";
@@ -16,9 +17,15 @@ import { MdPerson } from "react-icons/md";
 import RegisterImage from "../../../public/assets/register.jpg";
 import { IconLogo } from "@/components/icons/IconLogo";
 import { MdPlayArrow } from "react-icons/md";
+import { RegieterUserBody, authApi } from "@/utils/api/authApi";
+import { PiSpinnerBold } from "react-icons/pi";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
 	const [showPass, setShowPass] = useState(false);
+	const [loading, setLoading] = useState(false);
+	const router = useRouter();
 	const { t } = useTranslation();
 	const {
 		formState: { errors },
@@ -28,8 +35,29 @@ const RegisterPage = () => {
 		resolver: zodResolver(REGISTER_USER_SCHEMA),
 	});
 
-	const registerUser: SubmitHandler<FieldValues> = (data) => {
-		console.log({ data });
+	const registerUser: SubmitHandler<FieldValues> = async (data) => {
+		setLoading(true);
+		try {
+			delete data.password2;
+			Object.keys(data).forEach((key) => (data[key] = data[key].trim()));
+			const { data: responseData } = await authApi.registerUser(
+				data as RegieterUserBody,
+			);
+			localStorage.setItem("token", responseData.data.token);
+			router.push("/");
+			setLoading(false);
+		} catch (err) {
+			setLoading(false);
+			if (axios.isAxiosError(err)) {
+				toast.error(err.response?.data.message || "Hubo un error inesperado", {
+					duration: 2000,
+					position: "top-right",
+					style: {
+						color: "red",
+					},
+				});
+			}
+		}
 	};
 	return (
 		<div className="fade w-full h-screen grid place-items-center">
@@ -94,7 +122,7 @@ const RegisterPage = () => {
 							autoComplete="name"
 							placeholder={t("register.inputs.fullName")}
 							variant="bordered"
-							name="fullName"
+							name="full_name"
 							register={register}
 							errorMessage={
 								errors.fullName ? String(errors.fullName.message) : ""
@@ -147,7 +175,9 @@ const RegisterPage = () => {
 							color="primary"
 							type="submit"
 							className="2xl:col-start-1 2xl:col-end-3"
+							disabled={loading}
 						>
+							{loading && <PiSpinnerBold className="w-5 h-5 animate-spin" />}
 							{t("register.buttons.submit")}
 						</CustomButton>
 						<p className="text-primary text-xs lg:text-sm 2xl:col-start-1 2xl:col-end-3 w-fit">
@@ -183,6 +213,7 @@ const RegisterPage = () => {
 						</div>
 					</div>
 				</div>
+				<Toaster />
 			</div>
 		</div>
 	);

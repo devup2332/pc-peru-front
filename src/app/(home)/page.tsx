@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import HomeBanner from "../../../public/assets/homeBanner.jpg";
 import "swiper/css";
 import Image from "next/image";
@@ -13,13 +13,8 @@ import { m } from "framer-motion";
 import { BiSolidRightArrow } from "react-icons/bi";
 import Carrousel from "@/components/organisms/Carrousel";
 import CathegoriesHome from "@/components/organisms/CathegoriesHome";
-import { API_URL } from "@/config/enviroments";
 const HomePage = () => {
 	const { t } = useTranslation();
-
-	useEffect(() => {
-		fetch(`${API_URL}/data`).then((res) => console.log(res));
-	}, []);
 
 	return (
 		<div>

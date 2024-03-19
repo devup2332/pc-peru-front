@@ -8,7 +8,7 @@ export const REGISTER_USER_SCHEMA = z
 		phone: z.string().min(9, {
 			message: "El teléfono debe tener al menos 10 caracteres.",
 		}),
-		fullName: z.string().min(3, {
+		full_name: z.string().min(3, {
 			message: "El nombre completo debe tener al menos 3 caracteres.",
 		}),
 		password: z.string().min(6, {

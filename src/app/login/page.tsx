@@ -16,13 +16,17 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
-import { sleep } from "@/utils/sleep";
 import Loading from "@/components/organisms/Loading";
+import { LoginUserBody, authApi } from "@/utils/api/authApi";
+import { Toaster, toast } from "sonner";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
 	const [showPass, setShowPass] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const [loadingPage, setLoadingPage] = useState(true);
+	const router = useRouter();
 
 	const {
 		register,
@@ -33,10 +37,26 @@ const LoginPage = () => {
 	});
 	const { t } = useTranslation();
 
-	const loginUser: SubmitHandler<FieldValues> = async () => {
+	const loginUser: SubmitHandler<FieldValues> = async (data) => {
 		setIsLoading(true);
-		await sleep(3000);
-		setIsLoading(false);
+		try {
+			const { data: loginUserResponse } = await authApi.loginUser(
+				data as LoginUserBody,
+			);
+			localStorage.setItem("token", loginUserResponse.data.token);
+			router.push("/");
+			setIsLoading(false);
+		} catch (err) {
+			setIsLoading(false);
+			if (axios.isAxiosError(err)) {
+				toast.error(
+					err.response?.data.message || "Hubo un problema inesperado",
+					{
+						duration: 2000,
+					},
+				);
+			}
+		}
 	};
 
 	useEffect(() => {
@@ -156,6 +176,7 @@ const LoginPage = () => {
 						</p>
 					</form>
 				</div>
+				<Toaster />
 			</div>
 		</div>
 	);
