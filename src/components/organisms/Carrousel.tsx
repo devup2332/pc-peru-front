@@ -14,7 +14,7 @@ const Carrousel = ({ items }: ICarrousel) => {
 	useEffect(() => {
 		const fn = () => {
 			setWith(
-				carrouselRef.current!.scrollWidth - carrouselRef.current!.offsetWidth
+				carrouselRef.current!.scrollWidth - carrouselRef.current!.offsetWidth,
 			);
 		};
 		fn();

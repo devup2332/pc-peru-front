@@ -8,6 +8,9 @@ const nextConfig = {
 			{
 				hostname: "i.blogs.es",
 			},
+			{
+				hostname: "http2.mlstatic.com",
+			},
 		],
 	},
 };

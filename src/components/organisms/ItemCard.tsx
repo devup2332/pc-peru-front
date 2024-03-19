@@ -1,7 +1,9 @@
 import { IoIosStar } from "react-icons/io";
 import React from "react";
+import Image from "next/image";
 
 interface ItemCardProp {
+
 	item: {
 		id: number;
 		image: string;
@@ -19,9 +21,11 @@ const ItemCard = ({ item }: ItemCardProp) => {
 			key={id}
 			className="bg-white border-1 h-full border-black/20 rounded-lg py-8 px-6 grid gap-5 max-w-sm mx-auto cursor-pointer hover:shadow-lg transition-shadow"
 		>
-			<img
+			<Image
 				src={image}
 				alt=""
+				width={300}
+				height={200}
 				className="object-contain w-full h-full"
 				style={{
 					aspectRatio: "4/2",

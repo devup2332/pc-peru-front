@@ -25,5 +25,5 @@ export const REGISTER_USER_SCHEMA = z
 		{
 			message: "Las contraseñas no coinciden.",
 			path: ["password2"],
-		}
+		},
 	);

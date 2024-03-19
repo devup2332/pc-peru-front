@@ -5,36 +5,34 @@
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 /* Firefox */
 input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
+	-moz-appearance: textfield;
+	appearance: textfield;
 }
 
 button {
-  outline: none;
+	outline: none;
 }
-
 
 .fade {
-  animation: fadeAnimation ease .5s forwards;
+	animation: fadeAnimation ease 0.5s forwards;
 }
 @keyframes fadeAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-  
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .carrousel {
-  cursor: grab;
-  overflow-x: hidden;
-  overflow-y: unset;
+	cursor: grab;
+	overflow-x: hidden;
+	overflow-y: unset;
 }

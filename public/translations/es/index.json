@@ -1,88 +1,88 @@
 {
-  "login": {
-    "title": "Bienvenido a",
-    "buttons": {
-      "google": "Ingresa con Google",
-      "or": "O ingresa usando tu correo",
-      "submit": "Ingresar"
-    },
-    "inputs": {
-      "email": "Correo",
-      "password": "Contraseña"
-    },
-    "forgotPassword": "¿Olvidaste tu contraseña?",
-    "sideImage": {
-      "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios",
-      "link": "Registrarse"
-    },
-    "links": {
-      "notHaveAccount": {
-        "text": "No tienes una cuenta ?",
-        "link": "Registrate"
-      }
-    },
-    "sideForm": {
-      "forgotPassword": "¿Olvidaste tu contraseña?"
-    }
-  },
-  "register": {
-    "title": {
-      "text": "Registrate en",
-      "brand": "PC Peru"
-    },
-    "buttons": {
-      "or": "O registrate usando tu correo",
-      "google": "Registrate con Google",
-      "submit": "Registrarse"
-    },
-    "inputs": {
-      "email": "Correo",
-      "phone": "Telefono",
-      "fullName": "Nombre completo",
-      "password": "Contraseña",
-      "password2": "Repite tu contraseña"
-    },
-    "links": {
-      "haveAccount": {
-        "text": "Tienes una cuenta ?",
-        "link": "Ingresa"
-      }
-    },
-    "sideImage": {
-      "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios",
-      "link": "Ingresar"
-    }
-  },
-  "home": {
-    "loading": "Cargando...",
-    "menu": {
-      "links": {
-        "home": "Inicio",
-        "components": "Componentes PC",
-        "smartphones": "Smartphones",
-        "budgets": "Presupuestos",
-        "login": "Ingresar",
-        "register": "Registrarse"
-      },
-      "seccions": {
-        "actions": "Acciones",
-        "authentication": "Autenticacion"
-      }
-    },
-    "banner": {
-      "input": {
-        "placeholderText": "Buscar algun producto"
-      },
-      "description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios"
-    },
-    "trending": {
-      "title": "Tendencias",
-      "showMore": "Ver mas"
-    },
-    "cathegory": {
-      "title": "Categorias",
-      "showMore": "Ver mas",
-      "description": "Elige una de nuestras categorias seleccionadas con los mejores productos"
-    }
-  }
+	"login": {
+		"title": "Bienvenido a",
+		"buttons": {
+			"google": "Ingresa con Google",
+			"or": "O ingresa usando tu correo",
+			"submit": "Ingresar"
+		},
+		"inputs": {
+			"email": "Correo",
+			"password": "Contraseña"
+		},
+		"forgotPassword": "¿Olvidaste tu contraseña?",
+		"sideImage": {
+			"description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios",
+			"link": "Registrarse"
+		},
+		"links": {
+			"notHaveAccount": {
+				"text": "No tienes una cuenta ?",
+				"link": "Registrate"
+			}
+		},
+		"sideForm": {
+			"forgotPassword": "¿Olvidaste tu contraseña?"
+		}
+	},
+	"register": {
+		"title": {
+			"text": "Registrate en",
+			"brand": "PC Peru"
+		},
+		"buttons": {
+			"or": "O registrate usando tu correo",
+			"google": "Registrate con Google",
+			"submit": "Registrarse"
+		},
+		"inputs": {
+			"email": "Correo",
+			"phone": "Telefono",
+			"fullName": "Nombre completo",
+			"password": "Contraseña",
+			"password2": "Repite tu contraseña"
+		},
+		"links": {
+			"haveAccount": {
+				"text": "Tienes una cuenta ?",
+				"link": "Ingresa"
+			}
+		},
+		"sideImage": {
+			"description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios",
+			"link": "Ingresar"
+		}
+	},
+	"home": {
+		"loading": "Cargando...",
+		"menu": {
+			"links": {
+				"home": "Inicio",
+				"components": "Componentes PC",
+				"smartphones": "Smartphones",
+				"budgets": "Presupuestos",
+				"login": "Ingresar",
+				"register": "Registrarse"
+			},
+			"seccions": {
+				"actions": "Acciones",
+				"authentication": "Autenticacion"
+			}
+		},
+		"banner": {
+			"input": {
+				"placeholderText": "Buscar algun producto"
+			},
+			"description": "Encuentra los mejores componentes electronicos en Peru y a los mejores precios"
+		},
+		"trending": {
+			"title": "Tendencias",
+			"showMore": "Ver mas"
+		},
+		"cathegory": {
+			"title": "Categorias",
+			"showMore": "Ver mas",
+			"description": "Elige una de nuestras categorias seleccionadas con los mejores productos"
+		}
+	}
 }
