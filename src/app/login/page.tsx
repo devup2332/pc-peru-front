@@ -16,7 +16,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
-import { sleep } from "@/lib/utils/sleep";
+import { sleep } from "@/utils/sleep";
 import Loading from "@/components/organisms/Loading";
 
 const LoginPage = () => {
@@ -35,12 +35,13 @@ const LoginPage = () => {
 	const loginUser: SubmitHandler<FieldValues> = async () => {
 		setIsLoading(true);
 		await sleep(3000);
-		setIsLoading(false);
+					setIsLoading(false);
 	};
 
 	useEffect(() => {
 		setLoadingPage(false);
 	}, []);
+
 	if (loadingPage) return <Loading />;
 	return (
 		<div className="fade h-screen flex justify-center items-center text-sm">

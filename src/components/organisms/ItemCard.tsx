@@ -24,6 +24,7 @@ const ItemCard = ({ item }: ItemCardProp) => {
 				alt=""
 				width={300}
 				height={200}
+				draggable={false}
 				className="object-contain w-full h-full"
 				style={{
 					aspectRatio: "4/2",
