@@ -3,13 +3,13 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"start:dev": "npm run format && next dev",
+		"start:dev": "env-cmd -f .env.development npm run format && next dev",
 		"build": "next build",
 		"start": "next start",
 		"lint": "eslint src",
 		"prepare": "husky",
-		"format": "prettier --write .",
-		"check": "eslint . && prettier --check ."
+    "format": "prettier --write \"src/**/*.ts\"",
+		"check": "eslint \"src/**/*.ts\" "
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^3.3.4",
@@ -19,6 +19,8 @@
 		"@uidotdev/usehooks": "^2.4.1",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.0",
+		"dotenv": "^16.4.5",
+		"env-cmd": "^10.1.0",
 		"eslint-plugin-react": "^7.34.1",
 		"framer-motion": "^11.0.5",
 		"i18next": "^23.9.0",
@@ -36,6 +38,7 @@
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {
+		"@dotenvx/dotenvx": "^0.26.0",
 		"@types/node": "^20",
 		"@types/react": "^18.2.57",
 		"@types/react-dom": "^18",
@@ -47,6 +50,7 @@
 		"husky": "^9.0.11",
 		"lint-staged": "^15.2.2",
 		"postcss": "^8",
+		"prettier": "^3.2.5",
 		"tailwindcss": "^3.3.0",
 		"typescript": "^5"
 	},
