@@ -23,6 +23,7 @@ const LoginPage = () => {
 	const [showPass, setShowPass] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const [loadingPage, setLoadingPage] = useState(true);
+
 	const {
 		register,
 		handleSubmit,

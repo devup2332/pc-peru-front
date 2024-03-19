@@ -3,12 +3,13 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"start:dev": "next dev",
+		"start:dev": "npm run format && next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint .",
+		"lint": "eslint src",
 		"prepare": "husky",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"check": "eslint . && prettier --check ."
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^3.3.4",
