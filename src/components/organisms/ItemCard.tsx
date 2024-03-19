@@ -1,7 +1,6 @@
 import { IoIosStar } from "react-icons/io";
 import React from "react";
 import Image from "next/image";
-
 interface ItemCardProp {
 	item: {
 		id: number;
