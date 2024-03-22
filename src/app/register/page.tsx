@@ -102,7 +102,7 @@ const RegisterPage = () => {
 							}
 						/>
 						<CustomInput
-							type="number"
+							type="tel"
 							required={false}
 							autoComplete="phone"
 							placeholder={t("register.inputs.phone")}

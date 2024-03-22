@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "start:dev": "env-cmd -f .env.development npm run format && next dev",
+    "start:local": "env-cmd -f .env.local npm run format && next dev",
+    "prisma:init": "prisma init",
+    "prisma:migrate": "prisma migrate dev --name init",
     "build": "next build",
     "start": "next start",
     "lint": "eslint src",
